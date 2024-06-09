@@ -1,6 +1,8 @@
 const express = require('express');
 const sequelize = require('./config/database');
 const produtoRoutes = require('./routes/produtoRoutes');
+const distribuidoraRoutes = require('./routes/distribuidoraRoutes');
+const editoraRoutes = require('./routes/editoraRoutes');
 
 const PORT = process.env.PORT || 3333;
 const app = express();
@@ -11,6 +13,8 @@ app.get('/', (req, res) => {
 });
 
 app.use('/produtos', produtoRoutes);
+app.use('/distribuidoras', distribuidoraRoutes);
+app.use('/editoras', editoraRoutes);
 
 (async () => {
     try {
