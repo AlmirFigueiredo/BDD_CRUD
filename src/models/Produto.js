@@ -5,7 +5,7 @@ const Produto = sequelize.define('Produto', {
     produto_id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
-        autoIncrement: true,
+        autoIncrement: false,
     },
     nome: {
         type: DataTypes.STRING,
@@ -13,7 +13,7 @@ const Produto = sequelize.define('Produto', {
     },
     descricao: {
         type: DataTypes.STRING,
-        allowNull: true,
+        allowNull: false,
     },
     preco_unitario: {
         type: DataTypes.DECIMAL,
@@ -25,7 +25,7 @@ const Produto = sequelize.define('Produto', {
     },
     categoria: {
         type: DataTypes.STRING,
-        allowNull: true,
+        allowNull: false,
     },
     quantidade_minima: {
         type: DataTypes.INTEGER,

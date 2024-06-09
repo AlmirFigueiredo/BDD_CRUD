@@ -18,13 +18,13 @@ const getAllProdutosController = async (req, res) => {
 
 const createProdutoController = async (req, res) => {
     try {
-        const { nome, descricao, preco_unitario, quantidade, categoria, quantidade_minima } = req.body;
+        const { produto_id, nome, descricao, preco_unitario, quantidade, categoria, quantidade_minima } = req.body;
 
-        if (!nome || !descricao || !preco_unitario || !quantidade || !categoria || !quantidade_minima) {
+        if (!produto_id || !nome || !descricao || !preco_unitario || !quantidade || !categoria || !quantidade_minima) {
             return res.status(400).json({ error: 'All fields are required' });
         }
 
-        const newProduto = await createProduto({ nome, descricao, preco_unitario, quantidade, categoria, quantidade_minima });
+        const newProduto = await createProduto({ produto_id, nome, descricao, preco_unitario, quantidade, categoria, quantidade_minima });
         res.status(201).json(newProduto);
     } catch (error) {
         console.error('Error creating product:', error);
