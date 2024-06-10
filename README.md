@@ -42,8 +42,12 @@ Os serviços são chamados pelos controladores, contema a lógica aplicada.
 - `editoraService.js`: Serviço que contém a lógica para editoras.
 - `produtoService.js`: Serviço que contém a lógica para produtos.
 
+#### Index.js
+
+Ponto de entrada da aplição.
+
+
 #### Arquivos Root
 
-- `index.js`: Ponto de entrada da aplicação.
 - `Procfile`: Contém instrução para o deploy.
 
